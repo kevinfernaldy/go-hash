@@ -6,7 +6,6 @@ import (
 	"errors"
 
 	"github.com/kevinfernaldy/go-hash/internal/constant"
-	"github.com/kevinfernaldy/go-hash/internal/typedef"
 )
 
 type SHA384 struct {
@@ -62,11 +61,11 @@ func (sha *SHA384) Digest() (string, error) {
 
 	for i := 0; i < iterations; i++ {
 		blockSlice := message[i*128 : (i+1)*128]
-		W := [80]typedef.Word64{}
+		W := [80]uint64{}
 
 		// Prepare message schedule
 		for t := 0; t < 16; t++ {
-			W[t] = typedef.Word64(binary.BigEndian.Uint64(blockSlice[t*8 : (t+1)*8]))
+			W[t] = uint64(binary.BigEndian.Uint64(blockSlice[t*8 : (t+1)*8]))
 		}
 
 		for t := 16; t < 80; t++ {

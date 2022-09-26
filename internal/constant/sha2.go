@@ -1,12 +1,8 @@
 package constant
 
-import (
-	"github.com/kevinfernaldy/go-hash/internal/typedef"
-)
-
 // SHA-224 Constants
 var (
-	SHA224_H = [8]typedef.Word32{
+	SHA224_H = [8]uint32{
 		0xc1059ed8,
 		0x367cd507,
 		0x3070dd17,
@@ -16,7 +12,7 @@ var (
 		0x64f98fa7,
 		0xbefa4fa4,
 	}
-	SHA224_K = [64]typedef.Word32{
+	SHA224_K = [64]uint32{
 		0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5,
 		0x3956c25b, 0x59f111f1, 0x923f82a4, 0xab1c5ed5,
 		0xd807aa98, 0x12835b01, 0x243185be, 0x550c7dc3,
@@ -38,7 +34,7 @@ var (
 
 // SHA-256 Constants
 var (
-	SHA256_H = [8]typedef.Word32{
+	SHA256_H = [8]uint32{
 		0x6a09e667,
 		0xbb67ae85,
 		0x3c6ef372,
@@ -48,7 +44,7 @@ var (
 		0x1f83d9ab,
 		0x5be0cd19,
 	}
-	SHA256_K = [64]typedef.Word32{
+	SHA256_K = [64]uint32{
 		0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5,
 		0x3956c25b, 0x59f111f1, 0x923f82a4, 0xab1c5ed5,
 		0xd807aa98, 0x12835b01, 0x243185be, 0x550c7dc3,
@@ -70,7 +66,7 @@ var (
 
 // SHA-384 Constants
 var (
-	SHA384_H = [8]typedef.Word64{
+	SHA384_H = [8]uint64{
 		0xcbbb9d5dc1059ed8,
 		0x629a292a367cd507,
 		0x9159015a3070dd17,
@@ -80,7 +76,7 @@ var (
 		0xdb0c2e0d64f98fa7,
 		0x47b5481dbefa4fa4,
 	}
-	SHA384_K = [80]typedef.Word64{
+	SHA384_K = [80]uint64{
 		0x428a2f98d728ae22, 0x7137449123ef65cd, 0xb5c0fbcfec4d3b2f, 0xe9b5dba58189dbbc,
 		0x3956c25bf348b538, 0x59f111f1b605d019, 0x923f82a4af194f9b, 0xab1c5ed5da6d8118,
 		0xd807aa98a3030242, 0x12835b0145706fbe, 0x243185be4ee4b28c, 0x550c7dc3d5ffb4e2,
@@ -106,7 +102,7 @@ var (
 
 // SHA-512 Constants
 var (
-	SHA512_H = [8]typedef.Word64{
+	SHA512_H = [8]uint64{
 		0x6a09e667f3bcc908,
 		0xbb67ae8584caa73b,
 		0x3c6ef372fe94f82b,
@@ -116,7 +112,7 @@ var (
 		0x1f83d9abfb41bd6b,
 		0x5be0cd19137e2179,
 	}
-	SHA512_K = [80]typedef.Word64{
+	SHA512_K = [80]uint64{
 		0x428a2f98d728ae22, 0x7137449123ef65cd, 0xb5c0fbcfec4d3b2f, 0xe9b5dba58189dbbc,
 		0x3956c25bf348b538, 0x59f111f1b605d019, 0x923f82a4af194f9b, 0xab1c5ed5da6d8118,
 		0xd807aa98a3030242, 0x12835b0145706fbe, 0x243185be4ee4b28c, 0x550c7dc3d5ffb4e2,
