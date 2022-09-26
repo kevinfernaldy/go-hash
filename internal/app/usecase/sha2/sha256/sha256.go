@@ -17,8 +17,8 @@ type SHA256 struct {
 
 func (sha *SHA256) appendMessage(payload []byte, length int) []byte {
 	payload = append(payload, 0x80)
-	zeroPads := 56 - (len(payload) % 64)
-	for i := 0; i < zeroPads; i++ {
+
+	for len(payload)%64 != 56 {
 		payload = append(payload, 0x00)
 	}
 
