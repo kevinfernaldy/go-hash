@@ -8,10 +8,8 @@ import (
 	"github.com/kevinfernaldy/go-hash/internal/constant"
 )
 
-type MD5 struct {
-	isUsed  bool
-	payload []byte
-	hash    []byte
+func rotl(x uint32, n uint32) uint32 {
+	return (x << n) | (x >> (32 - n))
 }
 
 func (md5 *MD5) appendMessage(payload []byte, length int) []byte {

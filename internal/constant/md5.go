@@ -1,5 +1,6 @@
 package constant
 
+// MD5 constants
 var (
 	MD5_s = [64]uint32{
 		7, 12, 17, 22, 7, 12, 17, 22, 7, 12, 17, 22, 7, 12, 17, 22,
